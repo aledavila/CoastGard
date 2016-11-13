@@ -1,4 +1,4 @@
-import React, { component } from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   PixelRatio,
@@ -17,7 +17,7 @@ export default class GAR extends Component {
       planning: 2,
       teamSelection: 2,
       teamFitness: 2,
-      enviornment: 2,
+      environment: 2,
       complexity: 2
     }
 
@@ -30,7 +30,7 @@ export default class GAR extends Component {
       planning: 2,
       teamSelection: 2,
       teamFitness: 2,
-      enviornment: 2,
+      environment: 2,
       complexity: 2
     })
   }
@@ -41,10 +41,10 @@ export default class GAR extends Component {
       planning,
       teamSelection,
       teamFitness,
-      enviornment,
+      environment,
       complexity
     } = this.state;
-    return supervision + planning + teamSelection + teamFitness + enviornment + complexity;
+    return supervision + planning + teamSelection + teamFitness + environment + complexity;
   }
 
   _color() {
@@ -64,7 +64,7 @@ export default class GAR extends Component {
     return (
       <View style={{flex: 1}}>
         <View style={[styles.header,  styles[this._color()]]}>
-          <Text style={styles.title}>{this.total()}{color}</Text>
+          <Text style={styles.title}>{this._total()}{color}</Text>
         </View>
 
         <View style={styles.sliderContainer}>
@@ -136,7 +136,7 @@ export default class GAR extends Component {
 
 const styles = StyleSheet.create({
   header: {
-    flex: 3,
+    flex:3,
     alignItems: 'center',
     justifyContent: 'center'
   },
